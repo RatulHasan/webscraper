@@ -6,7 +6,7 @@ params = {"q": search}
 
 r = requests.get("https://www.bing.com/search", params=params)
 
-soup = BeautifulSoup(r.text)
+soup = BeautifulSoup(r.text, "html5lib")
 
 f = open("soup.html", "w+")
 f.write(soup.prettify())
