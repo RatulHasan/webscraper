@@ -22,7 +22,7 @@ def StartSearch():
     for item in links:
         try:
             img_obj = requests.get(item.attrs["href"])
-            img_link = item.attrs["href"]
+            # img_link = item.attrs["href"]
             title = item.attrs["href"].split("/")[-1]
             try:
                 image = Image.open(BytesIO(img_obj.content))
